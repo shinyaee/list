@@ -1,3 +1,51 @@
+/* 頁面基本布局 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 內容垂直排列 */
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    overflow: hidden; /* 防止頁面滾動 */
+}
+
+/* 容器樣式 */
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* 按鈕樣式 */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* 顯示選中的歌曲 */
+#song-result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
 /* 歌曲清單顯示區域 */
 #song-list {
     display: flex; /* 使歌單容器成為彈性容器 */
@@ -6,16 +54,15 @@
     text-align: left;
     width: 100%;
     max-width: 600px; /* 設定最大寬度 */
-    margin: 0 auto; /* 使其水平居中 */
+    margin: 20px auto; /* 使其水平居中 */
     padding: 20px;
-    background-color: #ffffff; /* 背景顏色，可以自定義 */
-    border-radius: 10px; /* 圓角樣式 */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 邊框陰影效果 */
+    background-color: #ffffff; /* 背景顏色 */
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 邊框陰影 */
     flex-direction: column; /* 使內容垂直排列 */
-    height: auto; /* 根據內容調整高度 */
-    max-height: none; /* 移除最大高度限制 */
-    overflow-y: auto; /* 若內容超過高度，顯示滾動條 */
-    box-sizing: border-box; /* 讓內邊距不影響總寬度 */
+    height: auto;
+    max-height: none;
+    overflow-y: auto; /* 顯示滾動條 */
 }
 
 /* 歌單項目樣式 */
@@ -24,15 +71,15 @@
     padding-left: 0;
     width: 100%;
     text-align: center; /* 歌曲文字水平居中 */
-    margin-bottom: 20px; /* 給歌單添加下邊距 */
+    margin-bottom: 20px;
 }
 
-/* 按鈕樣式 */
+/* 關閉按鈕樣式 */
 #song-list button {
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #f44336;
     color: white;
     border: none;
     border-radius: 5px;
@@ -40,14 +87,14 @@
 }
 
 #song-list button:hover {
-    background-color: #45a049;
+    background-color: #e53935;
 }
 
 /* 響應式設計：針對小螢幕（手機） */
 @media (max-width: 600px) {
     #song-list {
         width: 90%; /* 手機端將清單寬度調整為 90% */
-        padding: 10px; /* 調整內邊距 */
+        padding: 10px;
     }
 
     #songs {
