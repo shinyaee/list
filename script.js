@@ -1,7 +1,7 @@
 const songs = [
-    "Song 1 - Artist A",
-    "Song 2 - Artist B",
-    "Song 3 - Artist C",
+    "↑人生ゲーム↓/ゆずひこ",
+    "1/6 -out of the gravity-/ぼーかりお",
+    "1/6/ぼーかりおどP",
     // 將您的歌單加入這裡
 ];
 
