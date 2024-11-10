@@ -592,6 +592,26 @@ const songs = [
     // 將您的歌單加入這裡
 ];
 
+// 顯示或隱藏歌曲清單的函數
+function toggleSongList() {
+    const songListDiv = document.getElementById("song-list");
+    const songListUl = document.getElementById("songs");
+
+    // 切換顯示狀態
+    if (songListDiv.style.display === "none") {
+        songListDiv.style.display = "block";
+
+        // 清空並填充歌曲清單
+        songListUl.innerHTML = "";
+        songs.forEach(song => {
+            const li = document.createElement("li");
+            li.textContent = song;
+            songListUl.appendChild(li);
+        });
+    } else {
+        songListDiv.style.display = "none";
+    }
+}
 function selectRandomSong() {
     const randomIndex = Math.floor(Math.random() * songs.length);
     const selectedSong = songs[randomIndex];
