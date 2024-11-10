@@ -624,5 +624,5 @@ function closeSongList() {
 function selectRandomSong() {
     const randomIndex = Math.floor(Math.random() * songs.length);
     const selectedSong = songs[randomIndex];
-    document.getElementById("song-result").textContent = `選ばれた曲: ${selectedSong}`;
+    document.getElementById("song-result").textContent = `${selectedSong}`;
 }
