@@ -56,3 +56,19 @@ button:hover {
     list-style-type: none;
     padding-left: 0;
 }
+
+/* 響應式設計：針對小螢幕（手機） */
+@media (max-width: 600px) {
+    /* 在手機上，歌曲清單的最大高度可以設定更小一些 */
+    #song-list {
+        max-height: 200px; /* 將最大高度設小，根據需要可以調整 */
+    }
+}
+
+/* 響應式設計：針對大螢幕（桌面） */
+@media (min-width: 601px) {
+    /* 在桌面端，歌曲清單的最大高度可以設定更大一些 */
+    #song-list {
+        max-height: 500px; /* 設定桌面端顯示的最大高度 */
+    }
+}
