@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="main-content">
         <h1>ランダムで抽選した曲</h1>
         <button onclick="selectRandomSong()">抽選</button>
         
-         <h2>選ばれた曲は:</h2>
+        <h2>選ばれた曲は:</h2>
         <p id="song-result">ボタンをクリックして抽選を開始</p>
         <button onclick="toggleSongList()">全リストを見る</button>
     </div>
-    <script src="script.js"></script>
 
     <div id="song-list" style="display: none;">
-    <h2>曲リスト</h2>
-    <ul id="songs"></ul>
-</div> 
+        <h2>曲リスト</h2>
+        <ul id="songs"></ul>
+        <button onclick="closeSongList()">閉じる</button> <!-- 用來關閉歌曲清單 -->
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
     
