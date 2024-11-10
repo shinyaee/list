@@ -17,6 +17,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* 容器寬度自適應 */
+    max-width: 600px; /* 控制最大寬度，避免過寬 */
+    margin: 20px auto; /* 使容器在頁面中居中 */
 }
 
 /* 按鈕樣式 */
@@ -49,6 +52,8 @@ button:hover {
     width: 100%; /* 確保清單寬度符合父容器 */
     max-height: 300px; /* 設定最大高度 */
     overflow-y: auto; /* 當內容超過最大高度時顯示垂直滾動條 */
+    padding-right: 10px; /* 保證歌單內容不會被裁切 */
+    box-sizing: border-box; /* 使 padding 包含在內，防止內容超出範圍 */
 }
 
 /* 歌曲列表樣式 */
