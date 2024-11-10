@@ -483,5 +483,5 @@ const songs = [
 function selectRandomSong() {
     const randomIndex = Math.floor(Math.random() * songs.length);
     const selectedSong = songs[randomIndex];
-    document.getElementById("song-result").textContent = `選ばれた曲は: ${selectedSong}`;
+    document.getElementById("song-result").textContent = `${selectedSong}`;
 }
