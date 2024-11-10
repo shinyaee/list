@@ -54,12 +54,18 @@ button:hover {
     overflow-y: auto; /* 當內容超過最大高度時顯示垂直滾動條 */
     padding-right: 10px; /* 保證歌單內容不會被裁切 */
     box-sizing: border-box; /* 使 padding 包含在內，防止內容超出範圍 */
+    display: flex;
+    justify-content: center; /* 使歌單置中 */
+    align-items: center; /* 使歌單垂直置中 */
+    flex-direction: column; /* 確保歌單項目垂直排列 */
 }
 
 /* 歌曲列表樣式 */
 #songs {
     list-style-type: none;
     padding-left: 0;
+    width: 80%; /* 可以控制清單寬度，避免太寬 */
+    text-align: center; /* 歌曲文字置中 */
 }
 
 /* 響應式設計：針對小螢幕（手機） */
