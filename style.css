@@ -25,8 +25,10 @@ button {
 #song-list {
     margin-top: 20px;
     text-align: left;
+    position: relative; /* 預設定位 */
+    top: 20px; /* 控制距離上方的間距 */
+    left: 0; /* 控制距離左邊的間距，這裡不需要調整 */
 }
-
 #songs {
     list-style-type: none;
     padding-left: 0;
