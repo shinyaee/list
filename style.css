@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
+    overflow: hidden; /* 防止頁面滾動 */
 }
 
 /* 容器樣式 */
@@ -50,14 +51,15 @@ button:hover {
     margin-top: 20px; /* 讓歌曲清單距離上方有些間距 */
     text-align: left;
     width: 100%; /* 確保清單寬度符合父容器 */
-    max-height: 300px; /* 設定最大高度 */
-    overflow-y: auto; /* 當內容超過最大高度時顯示垂直滾動條 */
+    overflow-y: auto; /* 當內容超過範圍時顯示滾動條 */
     padding-right: 10px; /* 保證歌單內容不會被裁切 */
     box-sizing: border-box; /* 使 padding 包含在內，防止內容超出範圍 */
     display: flex;
     justify-content: center; /* 使歌單置中 */
-    align-items: center; /* 使歌單垂直置中 */
+    align-items: flex-start; /* 讓清單從上方開始顯示 */
     flex-direction: column; /* 確保歌單項目垂直排列 */
+    max-height: none; /* 移除固定最大高度，讓它自適應 */
+    padding-bottom: 20px; /* 保證底部不會被裁切 */
 }
 
 /* 歌曲列表樣式 */
@@ -70,9 +72,14 @@ button:hover {
 
 /* 響應式設計：針對小螢幕（手機） */
 @media (max-width: 600px) {
-    /* 在手機上，歌曲清單的最大高度可以設定更小一些 */
+    /* 保證手機上顯示時歌單也能自適應 */
     #song-list {
-        max-height: 200px; /* 將最大高度設小，根據需要可以調整 */
+        padding-top: 20px; /* 保證歌單內容不會被遮住 */
+    }
+
+    #songs {
+        width: 100%; /* 手機端可以讓歌單寬度充滿 */
+        padding-right: 20px; /* 手機上的內邊距 */
     }
 }
 
