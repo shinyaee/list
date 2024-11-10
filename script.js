@@ -594,26 +594,35 @@ const songs = [
 
 // 顯示或隱藏歌曲清單的函數
 function toggleSongList() {
+    // 隱藏主內容區域
+    document.getElementById("main-content").style.display = "none";
+    
+    // 顯示歌曲清單
     const songListDiv = document.getElementById("song-list");
+    songListDiv.style.display = "block";
+
+    // 填充歌曲清單
     const songListUl = document.getElementById("songs");
-
-    // 切換顯示狀態
-    if (songListDiv.style.display === "none") {
-        songListDiv.style.display = "block";
-
-        // 清空並填充歌曲清單
-        songListUl.innerHTML = "";
-        songs.forEach(song => {
-            const li = document.createElement("li");
-            li.textContent = song;
-            songListUl.appendChild(li);
-        });
-    } else {
-        songListDiv.style.display = "none";
-    }
+    songListUl.innerHTML = "";
+    songs.forEach(song => {
+        const li = document.createElement("li");
+        li.textContent = song;
+        songListUl.appendChild(li);
+    });
 }
+
+// 關閉歌曲清單，返回主頁面
+function closeSongList() {
+    // 隱藏歌曲清單
+    document.getElementById("song-list").style.display = "none";
+
+    // 顯示主內容區域
+    document.getElementById("main-content").style.display = "block";
+}
+
+// 隨機選擇歌曲的函數
 function selectRandomSong() {
     const randomIndex = Math.floor(Math.random() * songs.length);
     const selectedSong = songs[randomIndex];
-    document.getElementById("song-result").textContent = `${selectedSong}`;
+    document.getElementById("song-result").textContent = `選ばれた曲: ${selectedSong}`;
 }
