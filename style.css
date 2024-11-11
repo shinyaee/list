@@ -7,7 +7,7 @@ body {
     align-items: center;
     background: radial-gradient(circle at 50% 50%, #1a1a2e, #16213e, #0f3460); 
     font-family: Arial, sans-serif;
-    /* 移除 overflow: hidden，讓頁面能夠滾動 */
+    /* 移除 overflow: hidden，讓頁面可以滾動 */
     overflow: unset;
 }
 
@@ -129,6 +129,7 @@ button:hover {
     height: auto;
     max-height: 500px; /* 設定最大高度 */
     overflow-y: auto; /* 顯示滾動條 */
+    position: relative; /* 保證歌單容器的滾動能正常顯示 */
 }
 
 /* 歌單項目樣式 */
