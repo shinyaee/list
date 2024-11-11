@@ -650,4 +650,3 @@ for (let i = 0; i < numberOfMeteors; i++) {
     meteor.style.setProperty('--end-x', `${endX}vw`);
     meteor.style.setProperty('--end-y', `${endY}vh`);
 }
-
