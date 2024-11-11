@@ -629,7 +629,6 @@ function selectRandomSong() {
 
 
 // 動態生成流星元素並添加到頁面
-const meteorContainer = document.getElementById('meteor-container');
 const numberOfMeteors = 20; // 生成 20 顆流星
 for (let i = 0; i < numberOfMeteors; i++) {
     const meteor = document.createElement('div');
@@ -644,9 +643,13 @@ for (let i = 0; i < numberOfMeteors; i++) {
     const endX = startX + (Math.random() * 20 - 10); // 結束位置 X 隨機偏移
     const endY = 110; // 流星結束位置超出視窗底部（110vh）
 
+    // 顯示流星的起始位置，便於排查問題
+    console.log(`Meteor ${i+1}: startX = ${startX}vw, startY = ${startY}vh`);
+
     // 設定流星的起點和終點位置
     meteor.style.setProperty('--start-x', `${startX}vw`);
     meteor.style.setProperty('--start-y', `${startY}vh`);
     meteor.style.setProperty('--end-x', `${endX}vw`);
     meteor.style.setProperty('--end-y', `${endY}vh`);
 }
+
