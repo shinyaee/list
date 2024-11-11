@@ -1,13 +1,21 @@
-body {
+/* 設置頁面基本樣式 */
+html, body {
     margin: 0;
-    height: 100vh;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* 防止滾動條出現 */
+}
+
+/* 頁面容器 */
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* 內容垂直排列 */
     background: radial-gradient(circle at 50% 50%, #1a1a2e, #16213e, #0f3460); 
     font-family: Arial, sans-serif;
-    overflow: hidden; /* 防止滾動條出現 */
-    position: relative; /* 確保流星的位置與畫面固定 */
+    height: 100vh;
+    position: relative;
 }
 
 /* 創造更密集的星星效果 */
@@ -60,31 +68,6 @@ body::before {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
-}
-
-/* 頁面基本布局 */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* 內容垂直排列 */
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    overflow: unset;
-}
-
-/* 容器樣式 */
-.container {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
 }
 
 /* 按鈕樣式 */
@@ -200,8 +183,8 @@ button:hover {
 .meteor:nth-child(1) {
     animation-duration: 3s;
     animation-delay: 0s;
-    --start-x: calc(100% * random());  /* 隨機選擇起始X座標 */
-    --start-y: calc(10vh + 20%); /* 上邊或下邊 */
+    --start-x: calc(100% * random()); /* 隨機選擇起始X座標 */
+    --start-y: calc(10vh + 20%); /* 從頁面上下邊緣開始 */
     --end-x: calc(50% + 300px);
     --end-y: calc(100vh + 200px);
 }
@@ -209,8 +192,8 @@ button:hover {
 .meteor:nth-child(2) {
     animation-duration: 4s;
     animation-delay: 0.5s;
-    --start-x: calc(100% * random());  /* 隨機選擇起始X座標 */
-    --start-y: calc(10vh + 40%);  /* 從頁面上下邊緣開始 */
+    --start-x: calc(100% * random()); /* 隨機選擇起始X座標 */
+    --start-y: calc(10vh + 40%); /* 從頁面上下邊緣開始 */
     --end-x: calc(30% + 400px);
     --end-y: calc(100vh + 250px);
 }
@@ -218,8 +201,8 @@ button:hover {
 .meteor:nth-child(3) {
     animation-duration: 5s;
     animation-delay: 1s;
-    --start-x: calc(100% * random());  /* 隨機選擇起始X座標 */
-    --start-y: calc(10vh + 5%);  /* 從上下邊緣隨機起始 */
+    --start-x: calc(100% * random()); /* 隨機選擇起始X座標 */
+    --start-y: calc(10vh + 5%); /* 從上下邊緣隨機起始 */
     --end-x: calc(70% + 200px);
     --end-y: calc(100vh + 300px);
 }
@@ -230,8 +213,8 @@ button:hover {
 .meteor:nth-child(6) {
     animation-duration: 5s;
     animation-delay: 2s;
-    --start-x: calc(100% * random());  /* 隨機選擇起始X座標 */
-    --start-y: calc(10vh + 30%);  /* 從四個邊緣開始 */
+    --start-x: calc(100% * random()); /* 隨機選擇起始X座標 */
+    --start-y: calc(10vh + 30%); /* 從四個邊緣開始 */
     --end-x: calc(50% + 500px);
     --end-y: calc(100vh + 100px);
 }
