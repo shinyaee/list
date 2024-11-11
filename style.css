@@ -6,50 +6,25 @@ body {
     
   
 justify-content: center;
-    
-    align
-align-items: center;
-    
-   
-background: radial-gradient(circle at 50% 50%, #1a1a2e, #16213e, #0f3460);
-    
-  
+alignalign-items: center;  
+background: radial-gradient(circle at 50% 50%, #1a1a2e, #16213e, #0f3460); 
 overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
 /* 創造更密集的星星效果 */
 body::before {
-    
-    con
-
-   
-content: "";
-    
-    posit
-
-    po
-position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    
-    backg
-
-   
-background: transparent;
-    
-    backgroun
-
-    backgr
-
-    ba
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
 
   
-background-image: radial-gradient(2px 2px at 10% 20%, #fff, transparent),
-                      
-
-
-   
+background-image: 
+radial-gradient(2px 2px at 10% 20%, #fff, transparent),   
 radial-gradient(2px 2px at 20% 30%, #fff, transparent),       
 radial-gradient(2px 2px at 30% 50%, #fff, transparent),
 radial-gradient(2px 2px at 40% 40%, #fff, transparent),
@@ -59,16 +34,16 @@ radial-gradient(1px 1px at 90% 10%, #fff, transparent),
 radial-gradient(1px 1px at 10% 90%, #fff, transparent),
 radial-gradient(1px 1px at 50% 30%, #fff, transparent),
 radial-gradient(1px 1px at 35% 85%, #fff, transparent),
-                      radial-gradient(2px 2px at 15% 15%, #fff, transparent),
-                      radial-gradient(1px 1px at 45% 60%, #fff, transparent),
-                      radial-gradient(2px 2px at 60% 80%, #fff, transparent),
-                      radial-gradient(1px 1px at 80% 60%, #fff, transparent),
-                      radial-gradient(2px 2px at 85% 20%, #fff, transparent),
-                      radial-gradient(1px 1px at 65% 45%, #fff, transparent),
-                      radial-gradient(1px 1px at 20% 75%, #fff, transparent),
-                      radial-gradient(1px 1px at 30% 85%, #fff, transparent),
-                      radial-gradient(2px 2px at 75% 10%, #fff, transparent),
-                      radial-gradient(1px 1px at 55% 95%, #fff, transparent);
+radial-gradient(2px 2px at 15% 15%, #fff, transparent),
+radial-gradient(1px 1px at 45% 60%, #fff, transparent),
+radial-gradient(2px 2px at 60% 80%, #fff, transparent),
+radial-gradient(1px 1px at 80% 60%, #fff, transparent),
+radial-gradient(2px 2px at 85% 20%, #fff, transparent),
+radial-gradient(1px 1px at 65% 45%, #fff, transparent),
+radial-gradient(1px 1px at 20% 75%, #fff, transparent),
+radial-gradient(1px 1px at 30% 85%, #fff, transparent),
+radial-gradient(2px 2px at 75% 10%, #fff, transparent),
+radial-gradient(1px 1px at 55% 95%, #fff, transparent);
     animation: twinkle 3s infinite alternate;
     opacity: 0.8;
 }
