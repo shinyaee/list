@@ -27,7 +27,8 @@ body::before {
     width: 100%;
     height: 100%;
     background: transparent;
-     background-image: 
+    background-image: 
+        /* 原來的星星位置 */
         radial-gradient(2px 2px at 10% 20%, #fff, transparent),
         radial-gradient(2px 2px at 15% 30%, #fff, transparent),
         radial-gradient(2px 2px at 30% 60%, #fff, transparent),
@@ -49,16 +50,16 @@ body::before {
         radial-gradient(2px 2px at 80% 40%, #fff, transparent),
         radial-gradient(1px 1px at 50% 20%, #fff, transparent),
         /* 增加更多星星 */
-        radial-gradient(2px 2px at 15% 10%, #fff, transparent),
-        radial-gradient(2px 2px at 60% 25%, #fff, transparent),
-        radial-gradient(1px 1px at 70% 35%, #fff, transparent),
-        radial-gradient(1px 1px at 90% 55%, #fff, transparent),
-        radial-gradient(2px 2px at 10% 75%, #fff, transparent),
-        radial-gradient(2px 2px at 40% 15%, #fff, transparent),
-        radial-gradient(1px 1px at 55% 70%, #fff, transparent),
-        radial-gradient(2px 2px at 65% 50%, #fff, transparent),
-        radial-gradient(1px 1px at 80% 30%, #fff, transparent),
-        radial-gradient(2px 2px at 50% 90%, #fff, transparent);
+        radial-gradient(2px 2px at 5% 5%, #fff, transparent), /* 左側最上方 */
+        radial-gradient(2px 2px at 10% 95%, #fff, transparent), /* 左側底部 */
+        radial-gradient(2px 2px at 95% 5%, #fff, transparent), /* 右側最上方 */
+        radial-gradient(2px 2px at 90% 95%, #fff, transparent), /* 右側底部 */
+        radial-gradient(2px 2px at 5% 50%, #fff, transparent), /* 左側中間 */
+        radial-gradient(2px 2px at 90% 50%, #fff, transparent), /* 右側中間 */
+        radial-gradient(1px 1px at 25% 20%, #fff, transparent), /* 左上 */
+        radial-gradient(1px 1px at 75% 30%, #fff, transparent), /* 右上 */
+        radial-gradient(2px 2px at 20% 80%, #fff, transparent), /* 左下 */
+        radial-gradient(1px 1px at 70% 80%, #fff, transparent); /* 右下 */
     animation: twinkle 3s infinite alternate;
     opacity: 0.8;
     z-index: -1; /* 使星星背景位於頁面內容的下層 */
