@@ -630,9 +630,9 @@ function selectRandomSong() {
 // 隨機生成流星的起點位置
 document.querySelectorAll('.meteor').forEach(function(meteor) {
     const startX = Math.random() * 100; // 隨機的起始X座標
-    const startY = 0; // 固定起始Y座標在最上方
-    const endX = Math.random() * 100 - 50; // 隨機的結束X座標
-    const endY = 100 + Math.random() * 100; // 隨機的結束Y座標，超出100vh的範圍
+    const startY = -10; // 固定起始Y座標在視窗上方的負位置
+    const endX = startX + (Math.random() * 20 - 10); // 隨機的結束X座標，稍微偏移
+    const endY = 110; // 結束位置在視窗下方的110vh，超出視窗底部
 
     // 設定流星的起點和終點位置
     meteor.style.setProperty('--start-x', `${startX}vw`);
