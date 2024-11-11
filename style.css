@@ -195,28 +195,28 @@ button:hover {
 .meteor:nth-child(1) {
     animation-duration: 3s;
     animation-delay: 0s;
-    --start-x: calc(10% + 80% * random()); /* 從上方隨機選擇X座標 */
-    --start-y: -5%; /* 從上方以外的區域開始 */
-    --end-x: calc(50% + 300px); /* 移動到頁面中間區域 */
-    --end-y: calc(100vh + 200px); /* 最終到達底部 */
+    --start-x: calc(100% * random()); /* 隨機選擇起始X座標 */
+    --start-y: calc(-10vh); /* 從頁面最上方開始 */
+    --end-x: calc(50% + 300px); /* 移動至頁面中間偏右 */
+    --end-y: calc(100vh + 200px); /* 移動到頁面底部 */
 }
 
 .meteor:nth-child(2) {
     animation-duration: 4s;
     animation-delay: 0.5s;
-    --start-x: calc(20% + 60% * random()); /* 從上方隨機選擇X座標 */
-    --start-y: -5%; /* 從上方開始 */
-    --end-x: calc(30% + 400px); 
-    --end-y: calc(100vh + 250px); 
+    --start-x: calc(100% * random()); /* 隨機選擇起始X座標 */
+    --start-y: calc(-10vh); /* 從頁面最上方開始 */
+    --end-x: calc(30% + 400px); /* 移動至頁面中間偏左 */
+    --end-y: calc(100vh + 250px); /* 移動到頁面底部 */
 }
 
 .meteor:nth-child(3) {
     animation-duration: 5s;
     animation-delay: 1s;
-    --start-x: calc(10% + 80% * random()); /* 從上方隨機選擇X座標 */
-    --start-y: -5%; /* 從上方開始 */
-    --end-x: calc(70% + 200px); 
-    --end-y: calc(100vh + 300px); 
+    --start-x: calc(100% * random()); /* 隨機選擇起始X座標 */
+    --start-y: calc(-10vh); /* 從頁面最上方開始 */
+    --end-x: calc(70% + 200px); /* 移動至頁面中間偏右 */
+    --end-y: calc(100vh + 300px); /* 移動到頁面底部 */
 }
 
 /* 增加更多流星 */
@@ -225,8 +225,8 @@ button:hover {
 .meteor:nth-child(6) {
     animation-duration: 5s;
     animation-delay: 2s;
-    --start-x: calc(10% + 80% * random()); /* 從上方隨機選擇X座標 */
-    --start-y: -5%; /* 從上方開始 */
-    --end-x: calc(50% + 500px);
-    --end-y: calc(100vh + 100px);
+    --start-x: calc(100% * random()); /* 隨機選擇起始X座標 */
+    --start-y: calc(-10vh); /* 從頁面最上方開始 */
+    --end-x: calc(50% + 500px); /* 移動至頁面中間偏右 */
+    --end-y: calc(100vh + 100px); /* 移動到頁面底部 */
 }
