@@ -7,8 +7,8 @@ body {
     align-items: center;
     background: radial-gradient(circle at 50% 50%, #1a1a2e, #16213e, #0f3460); 
     font-family: Arial, sans-serif;
-    /* 移除 overflow: hidden，讓頁面可以滾動 */
     overflow: unset;
+    position: relative; /* 確保流星的絕對定位可以根據body來計算 */
 }
 
 /* 創造更密集的星星效果 */
@@ -73,7 +73,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
-    /* 移除 overflow: hidden，讓頁面可以滾動 */
     overflow: unset;
 }
 
@@ -114,22 +113,22 @@ button:hover {
 
 /* 歌曲清單顯示區域 */
 #song-list {
-    display: flex; /* 使歌單容器成為彈性容器 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: left;
     width: 100%;
-    max-width: 600px; /* 設定最大寬度 */
-    margin: 20px auto; /* 使其水平居中 */
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff; /* 背景顏色 */
-    border-radius: 10px; /* 圓角 */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 邊框陰影 */
-    flex-direction: column; /* 使內容垂直排列 */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
     height: auto;
-    max-height: 500px; /* 設定最大高度 */
-    overflow-y: auto; /* 顯示滾動條 */
-    position: relative; /* 保證歌單容器的滾動能正常顯示 */
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
 }
 
 /* 歌單項目樣式 */
@@ -137,7 +136,7 @@ button:hover {
     list-style-type: none;
     padding-left: 0;
     width: 100%;
-    text-align: center; /* 歌曲文字水平居中 */
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -160,7 +159,7 @@ button:hover {
 /* 響應式設計：針對小螢幕（手機） */
 @media (max-width: 600px) {
     #song-list {
-        width: 90%; /* 手機端將清單寬度調整為 90% */
+        width: 90%;
         padding: 10px;
     }
 
@@ -172,6 +171,50 @@ button:hover {
 /* 響應式設計：針對大螢幕（桌面） */
 @media (min-width: 601px) {
     #song-list {
-        width: 80%; /* 在桌面端將清單寬度設置為 80% */
+        width: 80%;
     }
+}
+
+/* 流星動畫 */
+@keyframes meteor {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(var(--x)) translateY(var(--y));
+        opacity: 0;
+    }
+}
+
+/* 流星樣式 */
+.meteor {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: meteor 2s linear infinite;
+}
+
+/* 動態生成流星，流星位置為隨機 */
+.meteor:nth-child(1) {
+    animation-duration: 3s;
+    animation-delay: 0s;
+    --x: calc(50% + 300px);
+    --y: calc(100vh + 200px);
+}
+
+.meteor:nth-child(2) {
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    --x: calc(30% + 400px);
+    --y: calc(100vh + 250px);
+}
+
+.meteor:nth-child(3) {
+    animation-duration: 5s;
+    animation-delay: 1s;
+    --x: calc(70% + 200px);
+    --y: calc(100vh + 300px);
 }
