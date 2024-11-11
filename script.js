@@ -627,25 +627,4 @@ function selectRandomSong() {
     document.getElementById("song-result").textContent = `${selectedSong}`;
 }
 
-// 生成流星的函數
-function createMeteor() {
-    const meteor = document.createElement('div');
-    meteor.classList.add('meteor');
-    
-    // 隨機設定流星的位置和延遲時間
-    const randomPosition = Math.random() * 100;
-    const randomDelay = Math.random() * 5;
 
-    meteor.style.top = `${randomPosition}%`;
-    meteor.style.left = `${randomPosition}%`;
-    meteor.style.animationDelay = `${randomDelay}s`;
-    document.body.appendChild(meteor);
-
-    // 一段時間後自動移除流星
-    setTimeout(() => {
-        meteor.remove();
-    }, 6000); // 讓流星顯示一段時間
-}
-
-// 每隔一段時間生成新的流星
-setInterval(createMeteor, 2000); // 每兩秒創建一顆流星
