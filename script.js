@@ -561,6 +561,7 @@ const songs = [
 "愛にできることはまだあるかい/RADWIMPS",
 "愛を感じて/ライオン・キング",
 "愛言葉Ⅲ/DECO*27",
+"愛言葉II/DECO*27",
 "愛唄/GReeeeN",
 "新時代/Ado",
 "極楽浄土/GARNiDELiA",
