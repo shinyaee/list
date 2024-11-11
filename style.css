@@ -6,9 +6,10 @@ body {
     justify-content: center;
     align-items: center;
     background: radial-gradient(circle at 50% 50%, #1a1a2e, #16213e, #0f3460); 
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     overflow: unset;
-    position: relative; /* 為了能夠放置流星層 */
+    position: relative;
+    color: #f1f1f1; /* 頁面文字顏色 */
 }
 
 /* 創造更密集的星星效果 */
@@ -86,40 +87,20 @@ body::after {
 .container {
     position: relative;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;    
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 600px;
+    z-index: 2; /* 確保在流星層和背景之上 */
 }
 
-/* 頁面基本布局 */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* 內容垂直排列 */
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    overflow: unset;
+h1 {
+    font-size: 2.5rem;
+    color: #00BCD4; /* 更加清晰的藍色 */
 }
 
-/* 容器樣式 */
-.container {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-/* 按鈕樣式 */
 button {
     padding: 10px 20px;
     font-size: 18px;
@@ -129,17 +110,27 @@ button {
     border: none;
     border-radius: 5px;
     margin: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #00BCD4;
+    background-color: #0097A7; /* 按鈕懸浮時顏色改變 */
 }
 
-/* 顯示選中的歌曲 */
+h2 {
+    font-size: 1.8rem;
+    color: #FFEB3B; /* 亮黃色 */
+}
+
+p {
+    font-size: 1.2rem;
+    color: #FFF;
+}
+
 #song-result {
     margin-top: 20px;
     font-size: 20px;
-    color: #333;
+    color: #fff;
 }
 
 /* 歌曲清單顯示區域 */
@@ -149,17 +140,17 @@ button:hover {
     align-items: center; /* 垂直居中 */
     text-align: left;
     width: 100%;
-    max-width: 600px; /* 設定最大寬度 */
-    margin: 20px auto; /* 使其水平居中 */
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff; /* 背景顏色 */
-    border-radius: 10px; /* 圓角 */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 邊框陰影 */
-    flex-direction: column; /* 使內容垂直排列 */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
     height: auto;
-    max-height: 500px; /* 設定最大高度 */
-    overflow-y: auto; /* 顯示滾動條 */
-    position: relative; /* 保證歌單容器的滾動能正常顯示 */
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
 }
 
 /* 歌單項目樣式 */
@@ -167,8 +158,9 @@ button:hover {
     list-style-type: none;
     padding-left: 0;
     width: 100%;
-    text-align: center; /* 歌曲文字水平居中 */
+    text-align: center;
     margin-bottom: 20px;
+    color: #333;
 }
 
 /* 關閉按鈕樣式 */
