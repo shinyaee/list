@@ -627,4 +627,16 @@ function selectRandomSong() {
     document.getElementById("song-result").textContent = `${selectedSong}`;
 }
 
-
+// 隨機生成流星的起點位置
+document.querySelectorAll('.meteor').forEach(function(meteor) {
+    const startX = Math.random() * 100; // 隨機的起始X座標
+    const startY = Math.random() * 100; // 隨機的起始Y座標
+    const endX = Math.random() * 100 - 50; // 隨機的結束X座標
+    const endY = Math.random() * 100 - 50; // 隨機的結束Y座標
+    
+    // 設定流星的起點和終點位置
+    meteor.style.setProperty('--start-x', `${startX}vw`);
+    meteor.style.setProperty('--start-y', `${startY}vh`);
+    meteor.style.setProperty('--end-x', `${endX}vw`);
+    meteor.style.setProperty('--end-y', `${endY}vh`);
+});
