@@ -627,11 +627,16 @@ function selectRandomSong() {
     document.getElementById("song-result").textContent = `${selectedSong}`;
 }
 
-// 隨機生成流星的起點位置
-document.querySelectorAll('.meteor').forEach(function(meteor) {
+// 動態生成流星元素並添加到頁面
+const numberOfMeteors = 20; // 生成 20 顆流星
+for (let i = 0; i < numberOfMeteors; i++) {
+    const meteor = document.createElement('div');
+    meteor.classList.add('meteor');
+    document.body.appendChild(meteor);
+
     // 隨機選擇起始 X 和 Y 座標
     const startX = Math.random() * 100; // 隨機的起始 X 座標 (0-100%)
-    const startY = Math.random() * -20; // 隨機的起始 Y 座標 (在視窗上方的負範圍，-20vh)
+    const startY = Math.random() * -20 - 5; // 隨機的起始 Y 座標 (在視窗上方的負範圍，確保流星從最上方開始)
     
     // 結束的 X 和 Y 座標
     const endX = startX + (Math.random() * 20 - 10); // 結束位置 X 隨機偏移
@@ -642,4 +647,4 @@ document.querySelectorAll('.meteor').forEach(function(meteor) {
     meteor.style.setProperty('--start-y', `${startY}vh`);
     meteor.style.setProperty('--end-x', `${endX}vw`);
     meteor.style.setProperty('--end-y', `${endY}vh`);
-});
+}
