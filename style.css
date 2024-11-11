@@ -104,7 +104,7 @@ button:hover {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9); /* 背景更加透明，避免與星星重疊 */
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     flex-direction: column;
@@ -112,8 +112,8 @@ button:hover {
     max-height: 500px;
     overflow-y: auto;
     position: relative;
+    z-index: 2; /* 保證歌曲清單在其他元素之上 */
 }
-
 /* 歌單項目樣式 */
 #songs {
     list-style-type: none;
