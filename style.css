@@ -130,7 +130,7 @@ button:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 邊框陰影 */
     flex-direction: column; /* 使內容垂直排列 */
     height: auto;
-    max-height: none;
+    max-height: 500px; /* 設定最大高度，並限制容器大小 */
     overflow-y: auto; /* 顯示滾動條 */
 }
 
