@@ -1,6 +1,7 @@
 body {
     margin: 0;
     height: 100vh;
+    overflow: hidden; /* 禁止頁面滾動，防止顯示滾動條 */
     display: flex;
     justify-content: center;
     align-items: center;
