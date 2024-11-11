@@ -178,11 +178,11 @@ button:hover {
 /* 流星動畫 */
 @keyframes meteor {
     0% {
-        transform: translateX(0) translateY(0);
+        transform: translateX(var(--start-x)) translateY(var(--start-y));
         opacity: 1;
     }
     100% {
-        transform: translateX(var(--x)) translateY(var(--y));
+        transform: translateX(var(--end-x)) translateY(var(--end-y));
         opacity: 0;
     }
 }
@@ -194,27 +194,45 @@ button:hover {
     height: 4px;
     background-color: #fff;
     border-radius: 50%;
-    animation: meteor 2s linear infinite;
+    animation: meteor linear infinite;
 }
 
 /* 動態生成流星，流星位置為隨機 */
 .meteor:nth-child(1) {
     animation-duration: 3s;
     animation-delay: 0s;
-    --x: calc(50% + 300px);
-    --y: calc(100vh + 200px);
+    --start-x: calc(100% * random());
+    --start-y: calc(10% + 20vh);
+    --end-x: calc(50% + 300px);
+    --end-y: calc(100vh + 200px);
 }
 
 .meteor:nth-child(2) {
     animation-duration: 4s;
     animation-delay: 0.5s;
-    --x: calc(30% + 400px);
-    --y: calc(100vh + 250px);
+    --start-x: calc(100% * random());
+    --start-y: calc(10% + 10vh);
+    --end-x: calc(30% + 400px);
+    --end-y: calc(100vh + 250px);
 }
 
 .meteor:nth-child(3) {
     animation-duration: 5s;
     animation-delay: 1s;
-    --x: calc(70% + 200px);
-    --y: calc(100vh + 300px);
+    --start-x: calc(100% * random());
+    --start-y: calc(10% + 5vh);
+    --end-x: calc(70% + 200px);
+    --end-y: calc(100vh + 300px);
+}
+
+/* 這裡可以繼續添加更多流星，如下 */
+.meteor:nth-child(4),
+.meteor:nth-child(5),
+.meteor:nth-child(6) {
+    animation-duration: 5s;
+    animation-delay: 2s;
+    --start-x: calc(100% * random());
+    --start-y: calc(10% + 30vh);
+    --end-x: calc(50% + 500px);
+    --end-y: calc(100vh + 100px);
 }
