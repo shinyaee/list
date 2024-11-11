@@ -63,7 +63,7 @@ body::before {
 .container {
     position: relative;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9); /* 背景顏色更亮，使用透明度來調整 */
     padding: 20px;
     border-radius: 10px;    
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
