@@ -5,9 +5,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at 50% 50%, #1a1a2e, #16213e, #0f3460); 
+    background: radial-gradient(circle at 50% 50%, #1a1a2e, #16213e, #0f3460);
     font-family: 'Arial', sans-serif;
-    overflow: unset;
+    overflow: hidden; /* 隱藏頁面外的部分 */
     position: relative;
     color: #f1f1f1; /* 頁面文字顏色 */
 }
@@ -21,13 +21,13 @@ body::before {
     width: 100%;
     height: 100%;
     background: transparent;
-    background-image: 
-        radial-gradient(2px 2px at 10% 20%, #fff, transparent),   
-        radial-gradient(2px 2px at 20% 30%, #fff, transparent),       
+    background-image:
+        radial-gradient(2px 2px at 10% 20%, #fff, transparent),
+        radial-gradient(2px 2px at 20% 30%, #fff, transparent),
         radial-gradient(2px 2px at 30% 50%, #fff, transparent),
         radial-gradient(2px 2px at 40% 40%, #fff, transparent),
         radial-gradient(1px 1px at 25% 70%, #fff, transparent),
-        radial-gradient(1px 1px at 70% 25%, #fff, transparent), 
+        radial-gradient(1px 1px at 70% 25%, #fff, transparent),
         radial-gradient(1px 1px at 90% 10%, #fff, transparent),
         radial-gradient(1px 1px at 10% 90%, #fff, transparent),
         radial-gradient(1px 1px at 50% 30%, #fff, transparent),
@@ -48,59 +48,100 @@ body::before {
 
 /* 星空閃爍動畫 */
 @keyframes twinkle {
-    from { opacity: 0.6; }
-    to { opacity: 1; }
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* 流星動畫 */
-@keyframes meteor-shower {
+@keyframes meteor {
     0% {
-        transform: translateY(-100%) translateX(100vw);
+        transform: translateX(-100%) translateY(-100%);
         opacity: 1;
     }
     100% {
-        transform: translateY(100vh) translateX(-100vw);
+        transform: translateX(100vw) translateY(100vh);
         opacity: 0;
     }
 }
 
-/* 流星層 */
-body::after {
-    content: "";
+/* 流星樣式 */
+.meteor {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    pointer-events: none;
+    background-color: #fff;
+    width: 2px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: meteor 1.5s linear infinite;
 }
 
-body::after {
-    animation: meteor-shower 2s linear infinite, meteor-shower 3s linear 1s infinite;
-    background-image: linear-gradient(45deg, #fff, #ff0, #f0f);
-    opacity: 0.7;
-    z-index: 1;
-}
-
-/* 主要內容的容器樣式 */
+/* 主要內容容器 */
 .container {
     position: relative;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    border-radius: 10px;    
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
-    z-index: 2; /* 確保在流星層和背景之上 */
+    z-index: 2;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #00BCD4; /* 更加清晰的藍色 */
+/* 頁面基本布局 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    overflow: hidden; /* 隱藏溢出部分 */
 }
 
+/* 生成流星的隨機位置和時間 */
+.meteor-1 {
+    top: 10%;
+    left: 50%;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+.meteor-2 {
+    top: 30%;
+    left: 20%;
+    animation-duration: 2.5s;
+    animation-delay: 2s;
+}
+
+.meteor-3 {
+    top: 50%;
+    left: 70%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.meteor-4 {
+    top: 60%;
+    left: 10%;
+    animation-duration: 2s;
+    animation-delay: 4s;
+}
+
+.meteor-5 {
+    top: 80%;
+    left: 90%;
+    animation-duration: 1.8s;
+    animation-delay: 5s;
+}
+
+/* 按鈕樣式 */
 button {
     padding: 10px 20px;
     font-size: 18px;
@@ -110,34 +151,20 @@ button {
     border: none;
     border-radius: 5px;
     margin: 10px;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0097A7; /* 按鈕懸浮時顏色改變 */
-}
-
-h2 {
-    font-size: 1.8rem;
-    color: #FFEB3B; /* 亮黃色 */
-}
-
-p {
-    font-size: 1.2rem;
-    color: #FFF;
-}
-
+/* 顯示選中的歌曲 */
 #song-result {
     margin-top: 20px;
     font-size: 20px;
-    color: #fff;
+    color: #333;
 }
 
 /* 歌曲清單顯示區域 */
 #song-list {
-    display: flex; /* 使歌單容器成為彈性容器 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: left;
     width: 100%;
     max-width: 600px;
@@ -153,47 +180,17 @@ p {
     position: relative;
 }
 
-/* 歌單項目樣式 */
-#songs {
-    list-style-type: none;
-    padding-left: 0;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* 關閉按鈕樣式 */
-#song-list button {
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-#song-list button:hover {
-    background-color: #e53935;
-}
-
-/* 響應式設計：針對小螢幕（手機） */
+/* 響應式設計 */
 @media (max-width: 600px) {
     #song-list {
-        width: 90%; /* 手機端將清單寬度調整為 90% */
+        width: 90%;
         padding: 10px;
-    }
-
-    #songs {
-        width: 100%;
     }
 }
 
 /* 響應式設計：針對大螢幕（桌面） */
 @media (min-width: 601px) {
     #song-list {
-        width: 80%; /* 在桌面端將清單寬度設置為 80% */
+        width: 80%;
     }
 }
