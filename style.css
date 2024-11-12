@@ -192,6 +192,7 @@ button:hover {
     animation: meteor linear infinite;
 }
 
+
 /* 設定不同的流星，並將起始位置設置為最上方 */
 .meteor:nth-child(1) {
     animation-duration: 3s;
