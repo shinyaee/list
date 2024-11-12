@@ -96,7 +96,7 @@ button {
 }
 
 button:hover {
-    background-color: #00BCD4;
+    background-color: #FF5722;
 }
 
 #select-button {
@@ -111,7 +111,7 @@ button:hover {
 }
 
 #select-button:hover {
-    background-color: #0097A7; /* 悬停时的背景色 */
+    background-color: #FF5722; /* 悬停时的背景色 */
 }
 
 /* 顯示選中的歌曲 */
