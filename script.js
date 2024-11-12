@@ -648,5 +648,10 @@ for (let i = 0; i < numberOfMeteors; i++) {
     meteor.style.setProperty('--start-y', `${startY}vh`);
     meteor.style.setProperty('--end-x', `${endX}vw`);
     meteor.style.setProperty('--end-y', `${endY}vh`);
+
+    // 隨機設定動畫時間和延遲
+    meteor.style.animationDuration = `${Math.random() * 3 + 3}s`; // 隨機動畫時長（3-6秒）
+    meteor.style.animationDelay = `${Math.random() * 3}s`; // 隨機延遲時間
 }
+
 
