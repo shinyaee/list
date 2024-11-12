@@ -629,7 +629,7 @@ function selectRandomSong() {
 
 
 // 動態生成流星元素並添加到頁面
-const numberOfMeteors = 40; // 生成 40 顆流星
+const numberOfMeteors = 60; // 生成 40 顆流星
 for (let i = 0; i < numberOfMeteors; i++) {
     const meteor = document.createElement('div');
     meteor.classList.add('meteor');
