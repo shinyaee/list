@@ -629,18 +629,18 @@ function selectRandomSong() {
 
 
 // 動態生成流星元素並添加到頁面
-const numberOfMeteors = 20; // 生成 20 顆流星
+const numberOfMeteors = 40; // 生成 40 顆流星
 for (let i = 0; i < numberOfMeteors; i++) {
     const meteor = document.createElement('div');
     meteor.classList.add('meteor');
     document.body.appendChild(meteor);
 
     // 隨機選擇起始 X 和 Y 座標
-    const startX = Math.random() * 100; // 隨機的起始 X 座標 (0-100%)
-    const startY = Math.random() * -30 - 40; // 隨機的起始 Y 座標，確保流星從視窗上方的偏上開始 (-40vh 到 -70vh)
+    const startX = Math.random() * 140 - 40; // 將範圍擴展為 -40 到 100，包含更多左側區域
+    const startY = Math.random() * -30 - 40; // 確保流星從更高處開始（-40vh 到 -70vh）
 
     // 設定流星結束的 X 和 Y 座標
-    const endX = startX + (Math.random() * 20 - 10); // 結束位置 X 隨機偏移，可以加大範圍來分佈在左側和右側
+    const endX = startX + (Math.random() * 40 - 20); // 結束位置 X 偏移範圍（-20 到 +20）
     const endY = 110; // 流星結束位置超出視窗底部（110vh）
 
     // 設定流星的起點和終點位置
