@@ -639,8 +639,8 @@ for (let i = 0; i < numberOfMeteors; i++) {
     const startX = Math.random() * 100; // 隨機的起始 X 座標 (0-100%)
     const startY = Math.random() * -20 - 5; // 隨機的起始 Y 座標，確保流星從視窗上方開始 (-5vh, -20vh)
 
-    // 結束的 X 和 Y 座標
-    const endX = startX + (Math.random() * 20 - 10); // 結束位置 X 隨機偏移
+    // 設定流星結束的 X 和 Y 座標
+    const endX = startX + (Math.random() * 20 - 10); // 結束位置 X 隨機偏移，可以加大範圍來分佈在左側和右側
     const endY = 110; // 流星結束位置超出視窗底部（110vh）
 
     // 設定流星的起點和終點位置
