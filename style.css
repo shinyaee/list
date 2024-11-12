@@ -104,7 +104,7 @@ button:hover {
     font-size: 22px; /* 增大文字大小 */
     width: 200px; /* 设置按钮宽度 */
     background-color: #00BCD4; /* 按钮背景色 */
-    color: white; /* 按钮文字颜色 */
+    color: #000; /* 按钮文字颜色 */
     border: none;
     border-radius: 5px;
     cursor: pointer;
