@@ -103,7 +103,8 @@ button:hover {
 #song-result {
     margin-top: 20px;
     font-size: 20px;
-    color: #333;
+    color: #555;
+    font-family: "Zhuanti", sans-serif; /* 使用租体字体 */
 }
 
 /* 歌曲清單顯示區域 */
