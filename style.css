@@ -103,8 +103,8 @@ button:hover {
 #song-result {
     margin-top: 20px;
     font-size: 20px;
-    color: #E5E5E5; /* 亮银色 */
-    font-family: "Source Han Sans", "Noto Sans CJK", "微软雅黑", sans-serif; /* 保留字体样式 */
+    color: #6A0DAD; /* 深紫色 */
+    font-family: "Source Han Sans", "Noto Sans CJK", "微软雅黑", sans-serif;
 }
 
 /* 歌曲清單顯示區域 */
