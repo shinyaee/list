@@ -15,12 +15,14 @@
         <button onclick="toggleSongList()">全リストを見る</button>
     </div>
 
-   <div id="song-list" style="display: none;">
+  <div id="song-list" style="display: none;">
     <div class="song-list-header">
         <h2>歌枠リスト</h2>
         <button onclick="closeSongList()">閉じる</button>
     </div>
-    <ul id="songs"></ul>
+    <div class="scrollable-list">
+        <ul id="songs"></ul>
+    </div>
 </div>
 
     <!-- 流星元素 -->
