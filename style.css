@@ -122,6 +122,14 @@ button:hover {
     font-family: "Source Han Sans", "Noto Sans CJK", "微软雅黑", sans-serif;
 }
 
+/* 歌枠リスト標題和閉じる按鈕樣式 */
+.song-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 /* 歌曲清單顯示區域 */
 #song-list {
     display: flex;
@@ -138,7 +146,7 @@ button:hover {
     flex-direction: column;
     height: auto;
     max-height: 500px;
-    overflow-y: auto;
+    overflow: hidden; /* 禁用滾動 */
     position: relative;
     z-index: 2; /* 保證歌曲清單在其他元素之上 */
 }
