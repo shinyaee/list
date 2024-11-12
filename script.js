@@ -640,19 +640,18 @@ for (let i = 0; i < numberOfMeteors; i++) {
     const startY = Math.random() * -30 - 40; // 隨機的起始 Y 座標，確保流星從視窗上方的偏上開始 (-40vh 到 -70vh)
 
     // 設定流星結束的 X 和 Y 座標
-    const endX = startX + (Math.random() * 30 - 15); // 設定結束位置 X 隨機偏移，增加範圍使流星可以在全屏範圍移動
+    const endX = startX + (Math.random() * 40 - 30); // 結束位置 X 隨機偏移，可以加大範圍來分佈在左側和右側
     const endY = 110; // 流星結束位置超出視窗底部（110vh）
 
     // 設定流星的起點和終點位置
     meteor.style.setProperty('--start-x', `${startX}vw`);
-    meteor.style.setProperty('--start-y`, `${startY}vh`);
+    meteor.style.setProperty('--start-y', `${startY}vh`);
     meteor.style.setProperty('--end-x', `${endX}vw`);
-    meteor.style.setProperty('--end-y`, `${endY}vh`);
+    meteor.style.setProperty('--end-y', `${endY}vh`);
 
     // 隨機設定動畫時間和延遲
     meteor.style.animationDuration = `${Math.random() * 3 + 3}s`; // 隨機動畫時長（3-6秒）
     meteor.style.animationDelay = `${Math.random() * 3}s`; // 隨機延遲時間
 }
-
 
 
