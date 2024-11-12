@@ -193,8 +193,3 @@ button:hover {
     animation: meteor linear infinite;
 }
 
-.cola-image {
-    width: 20px; /* 根据需要调整大小 */
-    height: auto;
-    margin-left: 8px; /* 调整图像和文字之间的间距 */
-}
