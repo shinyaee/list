@@ -85,19 +85,18 @@ body::before {
 
 /* 按鈕樣式 */
 button {
-    color: #333; /* 深色字體提高對比 */
-    font-weight: bold; /* 增加字體粗細 */
-    font-size: 16px; /* 調整字體大小 */
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* 添加淺色陰影增強字體可讀性 */
     padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #00BCD4;
+    color: white;
+    border: none;
     border-radius: 5px;
-    background-color: #f8f9fa; /* 添加稍微深色的背景 */
-    border: 1px solid #ccc;
-    transition: background-color 0.3s;
+    margin: 10px;
 }
 
 button:hover {
-    background-color: #e0e0e0; /* 增加 hover 效果 */
+    background-color: #00BCD4;
 }
 
 /* 顯示選中的歌曲 */
