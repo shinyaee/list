@@ -99,6 +99,21 @@ button:hover {
     background-color: #00BCD4;
 }
 
+#select-button {
+    padding: 15px 30px; /* 增加按钮的内边距 */
+    font-size: 22px; /* 增大文字大小 */
+    width: 200px; /* 设置按钮宽度 */
+    background-color: #00BCD4; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#select-button:hover {
+    background-color: #0097A7; /* 悬停时的背景色 */
+}
+
 /* 顯示選中的歌曲 */
 #song-result {
     margin-top: 20px;
