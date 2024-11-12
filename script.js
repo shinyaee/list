@@ -636,7 +636,7 @@ for (let i = 0; i < numberOfMeteors; i++) {
     document.body.appendChild(meteor);
 
     // 隨機選擇起始 X 和 Y 座標
-    const startX = Math.random() * 140 - 40; // 將範圍擴展為 -40 到 100，包含更多左側區域
+    const startX = Math.random() * 160 - 60; // 將範圍調整為 -60 到 100，讓更多流星從左側出現
     const startY = Math.random() * -30 - 40; // 確保流星從更高處開始（-40vh 到 -70vh）
 
     // 設定流星結束的 X 和 Y 座標
@@ -653,4 +653,5 @@ for (let i = 0; i < numberOfMeteors; i++) {
     meteor.style.animationDuration = `${Math.random() * 3 + 3}s`; // 隨機動畫時長（3-6秒）
     meteor.style.animationDelay = `${Math.random() * 3}s`; // 隨機延遲時間
 }
+
 
