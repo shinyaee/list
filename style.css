@@ -129,9 +129,10 @@ button:hover {
     align-items: center;
     width: 100%;
     padding: 0; /* 去除額外的 padding，減少空白 */
+    margin: 0; /* 確保沒有額外的 margin */
     background-color: transparent; /* 背景設為透明 */
     position: sticky;
-    top: 0;
+    top: 0; /* 確保它緊貼上方 */
     z-index: 2;
     box-shadow: none; /* 去掉可能的陰影 */
 }
@@ -139,6 +140,7 @@ button:hover {
 .scrollable-list {
     max-height: 400px; /* 設定內容區域最大高度 */
     overflow-y: auto; /* 啟用垂直滾動 */
+    margin-top: 0; /* 確保沒有額外的 margin */
 }
 /* 歌曲清單顯示區域 */
 #song-list {
