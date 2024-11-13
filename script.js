@@ -275,7 +275,6 @@ const songs = [
 "BOY MEETS GIRL/TRF",
 "Adrenaline!!!/TrySail",
 "晚餐歌/tuki",
-"晩餐歌/tuki.",
 "シュガーソングとビターステップ/UNISON SQUARE GARDEN",
 "アンビバレント/Uru ",
 "CHANGE THE WORLD/V6",
