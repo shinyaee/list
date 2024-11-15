@@ -102,7 +102,7 @@ const songs = [
 "KISS ME BABY!!!/ELEGUMI TOKYO",
 "Cosmic star/emon",
 "Shake it!/emon（Tes.）",
-"平行線/Eve",
+"平行線/Eve × suis",
 "群青讃歌/Eve",
 "careless breath/EXILE",
 "虹を編めたら/fhana",
